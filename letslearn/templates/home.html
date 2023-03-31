@@ -1,15 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Hello World</title>
+<style>
+body{
+	background-color: #ccc;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover:not(.active) {
+  background-color: black;
+}
+li a:hover:not(.active1) {
+  background-color: black;
+}
+
+.active {
+  background-color: #333;
+  text-decoration: none;
+}
+.active1 {
+  background-color: #333;
+  text-decoration: none;
+}
+</style>
 </head>
 <body>
-{% extends 'base.html'}
 
-{% block content %}
-<h1>Hello This is {{name}}</h1>
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="addfriend">Add Friend</a></li>
+  <li><a href="#Send a Message">Send a Message</a></li>
+  <li style="float:right"><a class="active" href="register">Logout</a></li>
+  <li style="float:right"><a class="active" href="register">Sign-Up</a></li>
+  <li style="float:right"><a class="active1" href="login">Login</a></li>
+</ul>
 
-{% endblock %}
 </body>
 </html>
+
+

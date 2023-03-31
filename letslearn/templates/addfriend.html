@@ -1,0 +1,52 @@
+<html>
+    <head>
+
+<style>
+.button {
+  position: relative;
+  background-color: #white;
+  border: black;
+  font-size: 16px;
+  color: #black;
+  padding: 0.1;
+  width: 100px;
+  text-align: center;
+  -webkit-transition-duration: 0.10s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.button:after {
+  content: "";
+  background: #90EE90;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 5;
+  transition: 0s
+}
+</style>
+</head>
+<body bgcolor="#ccc">
+         <h1>Add a friend in your List</h1>
+         {% block content %}
+         {{Profile}}
+         {% endblock content %}
+
+            Enter:- <input type="text" name="Useraname" placeholder="Enter a UserName">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+<button class="button">Search</button>
+			  </body>
+    </html>
